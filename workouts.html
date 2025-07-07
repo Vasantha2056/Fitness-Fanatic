@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workouts | Fitness Fanatic</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <h1 class="logo">Fitness Fanatic</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types-of-workouts.html">Types</a></li>
+        <li><a href="progress.html">Progress</a></li>
+         <li><a href="bmi.html">BMI</a></li>
+         <li><a href="blogs.html">Blogs</a></li>
+         <li><a href="diet.html">Diet Plans</a></li>
+<li><a href="leaderboard.html">Leaderboard</a></li>
+
+
+        <li><a href="thankyou.html">Thank You</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- WORKOUT SECTION -->
+  <section class="workout-page">
+    <h2>Today's Workout Plan</h2>
+
+    <div class="workout-item">
+      <h3>🧘 Warm-Up <span onclick="toggleDetails(this)">[+]</span></h3>
+      <ul class="details">
+        <li>Arm Circles – 1 min</li>
+        <li>Jumping Jacks – 2 mins</li>
+        <li>High Knees – 1 min</li>
+      </ul>
+      <button onclick="markDone(this)">Mark as Done</button>
+    </div>
+
+    <div class="workout-item">
+      <h3>🏋️ Strength Training <span onclick="toggleDetails(this)">[+]</span></h3>
+      <ul class="details">
+        <li>Push-ups – 3 sets</li>
+        <li>Squats – 3 sets</li>
+        <li>Plank – 1 min</li>
+      </ul>
+      <button onclick="markDone(this)">Mark as Done</button>
+    </div>
+
+    <div class="workout-item">
+      <h3>🚴 Cardio Blast <span onclick="toggleDetails(this)">[+]</span></h3>
+      <ul class="details">
+        <li>Jump Rope – 3 mins</li>
+        <li>Burpees – 2 mins</li>
+        <li>Mountain Climbers – 1 min</li>
+      </ul>
+      <button onclick="markDone(this)">Mark as Done</button>
+    </div>
+
+    <div class="progress-link">
+      <a href="progress.html" class="get-started-btn">View My Progress</a>
+    </div>
+  </section>
+  <section class="hydration-section">
+  <h2>💧 Track Water Intake & Workout Duration</h2>
+  <p>Log your water and workout hours daily!</p>
+
+  <div class="hydration-inputs">
+    <input type="number" id="waterInput" placeholder="Water intake (liters)" step="0.1" />
+    <input type="number" id="hoursInput" placeholder="Workout duration (hours)" step="0.1" />
+    <button onclick="saveHydration()">Save</button>
+  </div>
+<button id="viewProgressBtn" onclick="goToProgress()" disabled>
+  View Progress
+</button>
+
+  <div class="hydration-display" id="hydrationResult"></div>
+  <canvas id="hydrationChart" width="400" height="200"></canvas>
+</section>
+
+
+
+  
+  <!-- Chart.js library and hydration logic -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="js/workouts.js"></script>
+
+<footer style="background: #222; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem;">
+  <p>&copy; 2025 Fitness Fanatic. All rights reserved.</p>
+  <p>Website designed by Vasantha · Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #00f0ff;">MIT License</a></p>
+</footer>
+</body>
+</html>
 <!-- Workouts Page with Hydration -->
