@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - Fitness Fanatic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+      background: #eef;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 0.5rem;
+      color: #333;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item" onclick="this.classList.toggle('active')">
+      <strong>❓ How often should I work out?</strong>
+      <div class="faq-answer">Aim for at least 3-5 days a week of physical activity for best results.</div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('active')">
+      <strong>❓ How can I track my fitness progress?</strong>
+      <div class="faq-answer">You can use the built-in progress tracker and hydration chart in the dashboard.</div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('active')">
+      <strong>❓ How much water should I drink daily?</strong>
+      <div class="faq-answer">A minimum of 2 liters per day is recommended for most people.</div>
+    </div>
+  </div>
+
+  <!-- Licensed Footer -->
+  <footer style="background: #222; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem;">
+    <p>&copy; 2025 Fitness Fanatic. All rights reserved.</p>
+    <p>Website designed by Vasantha · Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #00f0ff;">MIT License</a></p>
+  </footer>
+</body>
+</html>
 <!-- FAQ Page -->
