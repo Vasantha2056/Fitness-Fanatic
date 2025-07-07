@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Fitness Fanatic</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-container {
+      max-width: 600px;
+      margin: 4rem auto;
+      background: #f5f5f5;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .contact-container h2 {
+      color: #00a884;
+    }
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .contact-container button {
+      background: #00a884;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? We'd love to hear from you!</p>
+    <form onsubmit="event.preventDefault(); alert('Thanks for contacting us!'); this.reset();">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Licensed Footer -->
+  <footer style="background: #222; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem;">
+    <p>&copy; 2025 Fitness Fanatic. All rights reserved.</p>
+    <p>Website designed by Vasantha · Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #00f0ff;">MIT License</a></p>
+  </footer>
+</body>
+</html>
 <!-- Contact Us Page -->
