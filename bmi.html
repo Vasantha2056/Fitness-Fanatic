@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator | Fitness Fanatic</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">Fitness Fanatic</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workouts.html">Workout</a></li>
+        <li><a href="progress.html">Progress</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+
+        <li><a href="thankyou.html">Thank You</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BMI CALCULATOR -->
+  <section class="bmi-section">
+    <h2>🧮 BMI Calculator</h2>
+    <p>Enter your height and weight to calculate your Body Mass Index</p>
+
+    <div class="bmi-form">
+      <input type="number" id="height" placeholder="Height in cm" />
+      <input type="number" id="weight" placeholder="Weight in kg" />
+      <button onclick="calculateBMI()">Calculate</button>
+    </div>
+
+    <div class="bmi-result" id="bmiResult"></div>
+  </section>
+
+  <script src="js/bmi.js"></script>
+  <footer style="background: #222; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem;">
+  <p>&copy; 2025 Fitness Fanatic. All rights reserved.</p>
+  <p>Website designed by Vasantha · Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #00f0ff;">MIT License</a></p>
+</footer>
+
+</body>
+</html>
 <!-- BMI Calculator Page -->
