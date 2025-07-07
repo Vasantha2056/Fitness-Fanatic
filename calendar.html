@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Workout Calendar - Fitness Fanatic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00a884;
+      margin-bottom: 1rem;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .day {
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .day.worked-out {
+      background: #00e676;
+      color: white;
+      font-weight: bold;
+    }
+
+    .day.inactive {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .calendar-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🗓️ Workout Calendar Tracker</h2>
+  <div class="calendar-header">
+    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+  </div>
+  <div class="calendar" id="calendar"></div>
+
+  <footer style="margin-top: 2rem; font-size: 0.8rem;">
+    <p>&copy; 2025 Fitness Fanatic. Designed by Reshma Chlo. Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a></p>
+  </footer>
+
+  <script>
+    const calendar = document.getElementById('calendar');
+    const today = new Date();
+    const month = today.getMonth(); // 0–11
+    const year = today.getFullYear();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDay = new Date(year, month, 1).getDay(); // 0 = Sun
+
+    const workoutLogKey = `workout-log-${month}-${year}`;
+    let log = JSON.parse(localStorage.getItem(workoutLogKey)) || [];
+
+    // Fill blanks before 1st of month
+    for (let i = 0; i < firstDay; i++) {
+      const blank = document.createElement('div');
+      blank.className = 'day inactive';
+      calendar.appendChild(blank);
+    }
+
+    // Render actual days
+    for (let d = 1; d <= daysInMonth; d++) {
+      const cell = document.createElement('div');
+      cell.className = 'day';
+      cell.innerText = d;
+
+      if (log.includes(d)) {
+        cell.classList.add('worked-out');
+      }
+
+      cell.addEventListener('click', () => {
+        if (log.includes(d)) {
+          log = log.filter(day => day !== d);
+          cell.classList.remove('worked-out');
+        } else {
+          log.push(d);
+          cell.classList.add('worked-out');
+        }
+
+        localStorage.setItem(workoutLogKey, JSON.stringify(log));
+      });
+
+      calendar.appendChild(cell);
+    }
+  </script>
+</body>
+</html>
 <!-- Calendar Page -->
