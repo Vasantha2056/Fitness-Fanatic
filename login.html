@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Fitness Fanatic</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <div class="card" id="card">
+      <!-- Front: Login -->
+      <div class="side front">
+        <h2>Welcome Back!</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPass" placeholder="Password" required />
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <span onclick="flipCard()">Sign Up</span></p>
+      </div>
+
+      <!-- Back: Signup -->
+      <div class="side back">
+        <h2>Create Account</h2>
+        <input type="email" id="signupEmail" placeholder="Email" required />
+        <input type="password" id="signupPass" placeholder="Password" required />
+        <button onclick="signup()">Sign Up</button>
+        <p>Already a member? <span onclick="flipCard()">Login</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <footer style="background: #222; color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem;">
+  <p>&copy; 2025 Fitness Fanatic. All rights reserved.</p>
+  <p>Website designed by Vasantha · Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: #00f0ff;">MIT License</a></p>
+</footer>
+</body>
+</html>
 <!-- Login Page -->
