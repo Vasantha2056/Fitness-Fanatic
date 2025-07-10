@@ -71,3 +71,13 @@ function showDiet(day) {
 document.addEventListener("DOMContentLoaded", () => {
   showDiet("Monday");
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const days = document.querySelectorAll('button');
+    days.forEach(btn => {
+        btn.addEventListener('click', () => {
+            alert(`Showing diet for ${btn.textContent}`);
+        });
+    });
+});
+
